@@ -1,0 +1,19 @@
+{
+    "name": "distance/calculator",
+    "description": "it a simple package that allow you to get the exact distance between two geo coordinates.",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Maalaouimazen",
+            "email": "mazenelmaalaoui@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Simplexi\\distance\\": "src/"
+        }
+    },
+    "require": {}
+}
