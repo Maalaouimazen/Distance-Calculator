@@ -4,8 +4,8 @@ class distance
 {
     public function Km(String $from, String $to)
     {
-        	$from = explode(',',$from);
-        	$to = explode(',',$to);
+        $from = explode(',',$from);
+        $to = explode(',',$to);
             $latitudeFrom  = $from[0];
             $longitudeFrom = $from[1] ;
             $latitudeTo    = $to[0]; 
@@ -19,8 +19,8 @@ class distance
     }
     public function M(String $from, String $to)
     {
-        	$from = explode(',',$from);
-        	$to = explode(',',$to);
+        $from = explode(',',$from);
+        $to = explode(',',$to);
             $latitudeFrom  = $from[0];
             $longitudeFrom = $from[1] ;
             $latitudeTo    = $to[0]; 
