@@ -1,5 +1,5 @@
 <?php
-namespace Simplexi\distance;
+namespace m2Dev\distance;
 class distance
 {
     public function Km(String $from, String $to)
