@@ -22,7 +22,7 @@ The option variable must be one of the next :
 * `$lat = "36.8762761"; $lng = "10.2538732";`
 * `$end = array($lat,$lng);`
 * `$opt = "k";`
-* `$GPS = new distance();`
+* `$GPS = new Distance();`
 * `$GPS->gpsCord($start,$end,$opt);`
 
 ***

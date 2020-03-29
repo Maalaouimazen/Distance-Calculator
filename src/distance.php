@@ -1,6 +1,6 @@
 <?php
 namespace m2Dev\distance;
-class distance
+class Distance
 {
     public function gpsCord($from, $to ,$opt=null)
     {
