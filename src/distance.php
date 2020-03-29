@@ -2,7 +2,7 @@
 namespace m2Dev\distance;
 class distance
 {
-    public function gpsCord($from, $to ,$opt)
+    public function gpsCord($from, $to ,$opt=null)
     {
         $res = null;
         if(empty($from)) return "Please add the start point coordinates";
