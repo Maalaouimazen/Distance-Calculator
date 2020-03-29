@@ -12,7 +12,7 @@
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
-            "m2Dev\\Distance\\": "src/"
+            "m2Dev\\distance\\": "src/"
         }
     },
     "require": {}
