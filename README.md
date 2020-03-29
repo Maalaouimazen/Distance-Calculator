@@ -14,7 +14,7 @@ The option variable must be one of the next :
 * **cm** For Centimeters
 * **mi** For Miles
 * **y** For Yard
-* **f** For Feet
+* **f** For Foot
 * **i** For Inch
 > The start and end points can be a string that contains the latitude and the longitud separated by a "," or it can be an array .
 * Example :
