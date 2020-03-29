@@ -17,7 +17,8 @@ The options available :
 * **y** For Yard
 * **f** For Foot
 * **i** For Inch
-> The start and end points can be a string that contains the latitude and the longitud separated by a "," or it can be an array .
+
+***
 
 ``` php
   use m2Dev\Distance\DistanceCalculator;
