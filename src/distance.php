@@ -27,7 +27,7 @@ class distance
         $f = $mi * 5280;
         $km    = $mi * 1.609344;
         $m    = $km * 1000;
-        $cm    = $m * 1000;
+        $cm    = $m * 100;
         switch ($opt) {
           case 'k':
             $res = round($km,2);
