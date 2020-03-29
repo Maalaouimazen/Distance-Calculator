@@ -5,10 +5,9 @@ Distance-Calculator is a lightweight plugin that allow you to get the exact dist
 **composer require distance/calculator**
 ## How to integrate in laravel
 Add the following line to your controller
-`use m2Dev\distance\distance;`
-## How to use
-The function use 3 variable : The start point {{ $start }} and End point {{ $end }} and at last the option {{ $opt }} .
-The option variable must be one of the next :
+`use m2Dev\Distance\DistanceCalculator;`
+## Usage
+The options available :
 * **k** For Kilometers
 * **m** For Meters
 * **cm** For Centimeters
@@ -18,12 +17,11 @@ The option variable must be one of the next :
 * **i** For Inch
 > The start and end points can be a string that contains the latitude and the longitud separated by a "," or it can be an array .
 * Example :
-* `$start = "36.7948624,10.0732379";`
-* `$lat = "36.8762761"; $lng = "10.2538732";`
-* `$end = array($lat,$lng);`
-* `$opt = "k";`
-* `$GPS = new Distance();`
-* `$GPS->gpsCord($start,$end,$opt);`
+`* $opt = "k";
+* $GPS = new Distance();
+* $GPS->SetStartingFrom(36.7948624,10.0732379);
+* $GPS->SetEndingAt(36.8762761,10.2538732);
+* $GPS->getDistance($opt);`
 
 ***
 > This is a simple and useful plugin , so many features will be added .

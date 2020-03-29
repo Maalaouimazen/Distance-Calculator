@@ -1,22 +1,33 @@
 <?php
-namespace m2Dev\Distance;
+namespace m2Dev\DistanceCalculator;
 class Distance
 {
-    public function gpsCord($from, $to ,$opt=null)
+    protected $startPoint;
+    protected $endPoint;
+
+    public function SetStartingFrom(float $lat, float $lng)
+    {
+      $this->startPoint = [$lat,$lng];
+    }
+    public function GetStartingFrom()
+    {
+      return $this->startPoint;
+    }
+    public function SetEndingAt(float $lat, float $lng)
+    {
+      $this->endPoint = [$lat,$lng];
+    }
+    public function GetEndingAt()
+    {
+      return $this->endPoint;
+    }
+    public function getDistance($opt=null)
     {
         $res = null;
-        if(empty($from)) return "Please add the start point coordinates";
-        if(empty($to)) return "Please add the end point coordinates";
-        if(!is_array($from)):
-          $from = explode(',',$from);
-        endif;
-        $latitudeFrom  = $from[0];
-        $longitudeFrom = $from[1];
-        if(!is_array($from)):
-          $to = explode(',',$to);
-        endif;
-        $latitudeTo    = $to[0];
-        $longitudeTo   = $to[1];
+        $latitudeFrom  = $this->GetStartingFrom()[0];
+        $longitudeFrom = $this->GetStartingFrom()[1];
+        $latitudeTo    = $this->GetEndingAt()[0];
+        $longitudeTo   = $this->GetEndingAt()[1];
         $theta    = $longitudeFrom - $longitudeTo;
         $dist    = sin(deg2rad($latitudeFrom)) * sin(deg2rad($latitudeTo)) +  cos(deg2rad($latitudeFrom)) * cos(deg2rad($latitudeTo)) * cos(deg2rad($theta));
         $dist    = acos($dist);
