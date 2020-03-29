@@ -6,7 +6,7 @@ Distance-Calculator is a lightweight plugin that allow you to get the exact dist
 ## How to integrate in laravel
 Add the following line to your controller
 ``` php
-use m2Dev\DistanceCalculator\Distance;
+use m2Dev\distance\Distance;
 ```
 ## Usage
 The options available :
@@ -21,7 +21,7 @@ The options available :
 ***
 
 ``` php
-  use m2Dev\DistanceCalculator\Distance;
+  use m2Dev\distance\Distance;
 
   $opt = "k";
   $GPS = new Distance();

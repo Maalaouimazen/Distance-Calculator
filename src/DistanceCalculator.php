@@ -1,5 +1,5 @@
 <?php
-namespace m2Dev\DistanceCalculator;
+namespace m2Dev\Distance;
 class Distance
 {
     protected $startPoint;
