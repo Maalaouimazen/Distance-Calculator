@@ -4,7 +4,9 @@ class distance
 {
     public function gpsCord($from, $to ,$opt)
     {
-       $res = null;
+        $res = null;
+        if(empty($from)) return "Please add the start point coordinates";
+        if(empty($to)) return "Please add the end point coordinates";
         if(!is_array($from)):
           $from = explode(',',$from);
         endif;
@@ -20,11 +22,14 @@ class distance
         $dist    = acos($dist);
         $dist    = rad2deg($dist);
         $mi    = $dist * 60 * 1.1515;
+        $y = $mi * 1760;
+        $in = $mi * 63360;
+        $f = $mi * 5280;
         $km    = $mi * 1.609344;
         $m    = $km * 1000;
         $cm    = $m * 1000;
         switch ($opt) {
-          case 'K':
+          case 'k':
             $res = round($km,2);
             break;
           case 'mi':
@@ -36,6 +41,17 @@ class distance
           case 'cm':
             $res = round($cm,2);
             break;
+          case 'y':
+              $res = round($y,2);
+            break;
+          case 'i':
+              $res = round($in,2);
+            break;
+          case 'f':
+              $res = round($f,2);
+            break;
+          default:
+           $res = round($km,2);
         }
         return $res;
     }
